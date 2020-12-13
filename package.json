@@ -1,43 +1,85 @@
 {
-  "name": "airline",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "twitterSearch",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "react-scripts build",
+        "build-storybook": "build-storybook -s public",
+        "eject": "react-scripts eject",
+        "start": "react-scripts start",
+        "storybook": "start-storybook -p 6006 -s public",
+        "test": "react-scripts test"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --write"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "resolutions": {
+        "babel-loader": "8.1.0"
+    },
+    "dependencies": {
+        "axios": "^0.21.0",
+        "bootstrap": "^4.5.3",
+        "husky": "^4.3.5",
+        "koa": "^2.13.0",
+        "koa-bodyparser": "^4.3.0",
+        "koa-json": "^2.0.2",
+        "koa-logger": "^3.2.1",
+        "koa-router": "^10.0.0",
+        "lint-staged": "^10.5.3",
+        "lodash-es": "4.17.15",
+        "react": "^17.0.1",
+        "react-datepicker": "^3.3.0",
+        "react-dom": "^17.0.1",
+        "react-redux": "^7.2.2",
+        "redux-thunk": "2.3.0",
+        "react-scripts": "4.0.1",
+        "typescript": "^4.0.3",
+        "web-vitals": "^0.2.4"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.53",
+        "@types/react-datepicker": "^3.1.2",
+        "@types/react-dom": "^16.9.8",
+        "@types/react-redux": "^7.1.12",
+        "@storybook/addon-actions": "^6.1.10",
+        "@storybook/addon-essentials": "^6.1.10",
+        "@storybook/addon-links": "^6.1.10",
+        "@storybook/node-logger": "^6.1.10",
+        "@storybook/preset-create-react-app": "^3.1.5",
+        "@storybook/react": "^6.1.10",
+        "@types/lodash-es": "4.17.3",
+        "prettier": "^2.2.1",
+        "prettier-plugin-packagejson": "2.2.5",
+        "pretty-quick": "1.11.1"
+    }
 }
